@@ -7,5 +7,8 @@ while True:
     os.system("cls")
     if user_selected.lower().strip() in ["rock", "paper", "scissors"]:
         ans = a.play_round(user_selected)
-        print(f"BOT SELECTED -> {ans[0]}")
+        print(f"BOT SELECTED -> {ans[1]}")
+    else:
+        print("You Did Not Select A Valid Option :(")
+        continue
     a.show_status()

@@ -25,6 +25,20 @@ class Game:
             Options.PAPER: Options.SCISSORS,
             Options.SCISSORS: Options.ROCK,
         }
+        self.__limit = -1
+
+    def set_limit(self, number):
+        self.__limit = number
+
+    def is_win(self):
+        if self.__limit == -1:
+            return 0
+        if self.bot_score >= self.__limit:
+            return -1
+        elif self.user_score >= self.__limit:
+            return 1
+        else:
+            return 0
 
     def get_selected_option(self, target_string):
         if target_string.lower().strip() == "rock":
